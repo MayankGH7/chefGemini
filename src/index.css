@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@theme{
+  --breakpoint-xs: 26.5rem;
+}
+
+/* .recipe-section ul li, .recipe-section ol li {
+  @apply mb-4 list-disc ml-4;
+}
+
+.recipe-section h1{
+  @apply text-3xl font-bold my-4;
+}
+
+.recipe-section h2{
+  @apply text-2xl font-bold my-4;
+} */
+
+.bg-gemini-gradient {
+  background: linear-gradient(
+    to right,
+    #439DDF 0%,
+    #4F87ED 52%,
+    #9476C5 78%,
+    #BC688E 89%,
+    #D6645D 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.recipe-section h1:not(.not-gemini-text){
+  background: linear-gradient(
+    to left,
+    #439DDF 0%,
+    #4F87ED 52%,
+    #9476C5 78%,
+    #BC688E 89%,
+    #D6645D 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
