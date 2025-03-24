@@ -4,7 +4,7 @@ import ChefGeminiRecipe from "./ChefGeminiRecipe";
 import IngredientsList from "./IngredientsList";
 
 export default function Main(){
-  const [ingredients, setIngredient] = useState<string[]>(["Milk", "Mango" , "Eggs", "Flour"]);
+  const [ingredients, setIngredient] = useState<string[]>([]);
   const [recipe, setRecipe] = useState("");
   const [btnContent, setBtnContent] = useState<JSX.Element | string>("Get a Recipe");
   const recipeSection = useRef<HTMLDivElement>(null);
