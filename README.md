@@ -21,7 +21,6 @@ Chef Claude is a delightful recipe finder application that helps users discover 
 <p align="center">
   <img src="./screenshots/chefgemini1.png" alt="Chef Claude Home Screen" width="45%">
   &nbsp; &nbsp;
-
   <img src="./screenshots/chefgemini2.png" alt="Recipe Details Screen" width="45%">
 </p>
 
