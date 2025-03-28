@@ -9,7 +9,7 @@ export default function Header() {
         <li><a href="/"><img className="w-14 drop-shadow-[0_0_5px_white] " src={chefLogo} alt="Chef logo" /></a></li>
 
         <li className="text-4xl flex gap-x-2 items-end">
-          <p className="bg-gemini-gradient">
+          <p className="bg-gemini-gradient select-none">
             <span className="font-[450] sm:font-medium">
               <span className="text-5xl">C</span>hef
             </span>

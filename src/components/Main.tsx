@@ -13,6 +13,19 @@ export default function Main(){
     setIngredient((prev) => [...prev, formData.get("ingredient") as string])
   }
 
+  function handleApiKey(){
+    const getApiKey = localStorage.getItem("GOOGLE_API_KEY");
+    if(getApiKey == "null" || !getApiKey){
+      const API_KEY = prompt("Enter your Gemini API KEY :");
+      if(typeof API_KEY  == "string"){
+        localStorage.setItem("GOOGLE_API_KEY", API_KEY);
+      }
+    };
+  };
+  useEffect(() => {
+    handleApiKey();
+  }, []);
+
   useEffect(() => {
     if (recipe && recipeSection) recipeSection.current!.scrollIntoView({behavior: "smooth"});
   }, [recipe])
@@ -22,6 +35,12 @@ export default function Main(){
 
     chefGemini(ingredients).then((response) => {
       setBtnContent("Get a Recipe");
+      if(response instanceof Error){
+        alert(response.message);
+        localStorage.removeItem("GOOGLE_API_KEY");
+        handleApiKey();
+        return;
+      };
       setRecipe(response);
     });
   }
